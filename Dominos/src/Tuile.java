@@ -22,7 +22,7 @@ public class Tuile {
         }
     }
 
-    public void touner() { // tourner de 90° dans le sens des aiguilles d'une montre
+    public void tourner() { // tourner de 90° dans le sens des aiguilles d'une montre
         int[] tmp = this.cotes[0];
         this.cotes[0] = this.cotes[3];
         this.cotes[3] = this.cotes[2];
@@ -76,13 +76,13 @@ public class Tuile {
         if(!(o instanceof Tuile)) return false;
         Tuile t = (Tuile) o;
         if(t.identique(this)) return true;
-        t.touner();
+        t.tourner();
         if(t.identique(this)) return true;
-        t.touner();
+        t.tourner();
         if(t.identique(this)) return true;
-        t.touner();
+        t.tourner();
         if(t.identique(this)) return true;
-        t.touner(); // Pour restaurer la tuile a son orientation avant le test
+        t.tourner(); // Pour restaurer la tuile a son orientation avant le test
         return false;
     }
 
